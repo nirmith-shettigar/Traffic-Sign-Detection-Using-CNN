@@ -126,7 +126,7 @@ const App = () => {
       formData.append("file", selectedImage);
 
       const backendUrl =
-        import.meta.env.VITE_BACK_END_URL || "http://localhost:8000";
+        import.meta.env.VITE_BACK_END_URL;
       const response = await axios.post(`${backendUrl}/predict`, formData, {
         headers: {
           "Content-Type": "multipart/form-data",
